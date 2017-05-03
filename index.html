@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<link href="bootstrap.min.css" rel="stylesheet">
+<script src="angular.min.js"></script>
+<script src="app.js"></script>
+<body ng-app="myShoppingList">
+<div  ng-controller="myCtrl" class="container text-center">
+<div class="row">
+	<br>
+	<div class="form-group">
+		<div class="form-input col-md-6">
+		<select ng-model="currency_from" ng-init="currency_from='INR'" ng-options="key as key for (key,value) in currencies" class="form-control"></select>
+		<input type="text" ng-model="currency_val_from" class="form-control">
+		</div>
+	<div class="form-input col-md-6">
+		<select ng-model="currency_to" ng-init="currency_to='INR'" ng-options="key as key for (key,value) in currencies" class="form-control"></select>
+		<input type="text" ng-model="currency_val_to" class="form-control">
+	</div>
+	</div>
+	<div class="clearfix"></div>
+	<br>
+	<div class="col-md-offset-5 col-md-2">
+		<button ng-click="convert()" class="btn btn-danger form-control">convert to</button>
+	</div>
+</div>
+</div>
+
+
+</body>
+</html>
